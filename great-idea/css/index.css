@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .navigation-bar nav {
-	flex-direction: center;
 	justify-content: space-between;
 }
 
@@ -207,6 +206,12 @@ section.details .about {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+#about .full-width-image {
+	background-attachment: fixed;
+	background-image: url('../img/parallax-content.png');
+	height: 400px;
 }
 
 .service-header {
@@ -351,28 +356,6 @@ footer {
 	overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
-	.services-section {
-		flex-direction: column;
-	}
-
-	.services-section .service {
-		width: 100%;
-	}
-
-	.section-facts {
-		flex-direction: column;
-	}
-
-	.section-facts div {
-		width: 100%;
-	}
-
-	.section-facts img {
-		width: 100%;
-	}
-}
-
 @media screen and (max-width: 1050px) {
 	.navigation-bar nav a:first-child {
 		margin: 0;
@@ -417,5 +400,60 @@ footer {
 	#navigation a.nav-opener {
 		float: left;
 		display: block;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	header {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+
+	header .sixtypercent {
+		width: 100%;
+	}
+
+	header .fortypercent {
+		width: 100%;
+	}
+	
+	.more-details {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+	.more-details .features, .more-details .about {
+		width: 48%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.services-section {
+		flex-direction: column;
+	}
+
+	.services-section .service {
+		width: 100%;
+	}
+
+	.section-facts {
+		flex-direction: column;
+	}
+
+	.section-facts div {
+		width: 100%;
+	}
+
+	.section-facts img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.more-details {
+		flex-direction: column;
+	}
+	.more-details .features, .more-details .about {
+		width: 100%;
 	}
 }
