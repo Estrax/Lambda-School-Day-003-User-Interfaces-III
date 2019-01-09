@@ -17,13 +17,16 @@
 <body>
   <div class="navigation-bar">
       <div class="nav-container">
-        <nav>
+        <nav id="navigation" class="navigation">
           <a href="services.html">Services</a>
           <a href="#">Product</a>
           <a href="#">Vision</a>
           <a href="#">Features</a>
           <a href="about.html">About</a>
           <a href="#">Contact</a>
+          <a href="javascript:void(0);" class="nav-opener" onclick="navigation()">
+            X
+          </a>
         </nav>
         <div>
           <a href="index.html"></a>
@@ -105,6 +108,13 @@
       Copyright &copy; Great Idea! 2018
     </footer>
   </div>
+  <script>
+    function navigation(){
+      let element = document.getElementById("navigation");
+      if(element.className === "navigation") element.className = "responsive";
+      else element.className = "navigation";
+    }
+  </script>
 </body>
 
 </html>
